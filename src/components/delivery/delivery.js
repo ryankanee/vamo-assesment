@@ -17,7 +17,7 @@ function Delivery({ setEnterNumber, setSelectedOrderId }) {
 
   const firstName = displayOrder?.firstName || "";
   const lastName = displayOrder?.lastName || "";
-  const estimate = displayOrder?.estimate || "";
+  const estimate = displayOrder?.estimatedDelivery || "";
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;

@@ -6,7 +6,6 @@ export const orders = [
     firstName: "Ryan",
     lastName: "Kane",
     estimatedDelivery: "Today, 3:45 PM",
-    estimate: "10 minutes",
     address: "123 Main Street, San Francisco, CA 94102",
     coordinates: {
       lat: 37.7749,
@@ -76,7 +75,6 @@ export const orders = [
     firstName: "Sarah",
     lastName: "Johnson",
     estimatedDelivery: "Tomorrow, 12:30 PM",
-    estimate: "15 minutes",
     address: "456 Oak Avenue, Los Angeles, CA 90210",
     coordinates: {
       lat: 34.0522,
@@ -146,7 +144,6 @@ export const orders = [
     firstName: "Mike",
     lastName: "Chen",
     estimatedDelivery: "Today, 7:15 PM",
-    estimate: "12 minutes",
     address: "789 Pine Street, Seattle, WA 98101",
     coordinates: {
       lat: 47.6062,
@@ -223,7 +220,6 @@ export const orders = [
     firstName: "Emily",
     lastName: "Rodriguez",
     estimatedDelivery: "Today, 5:20 PM",
-    estimate: "8 minutes",
     address: "321 Elm Street, Austin, TX 78701",
     coordinates: {
       lat: 30.2672,

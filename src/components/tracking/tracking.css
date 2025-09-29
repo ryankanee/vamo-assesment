@@ -1,0 +1,518 @@
+/* Main Tracking Container */
+.tracking-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #eff1f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tracking-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #223843;
+  font-size: 28px;
+}
+
+/* Order Selector Styles */
+.order-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #eff1f3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(34, 56, 67, 0.1);
+  border: 1px solid #dbd3d8;
+}
+
+.order-select-label {
+  font-weight: 600;
+  color: #223843;
+  font-size: 16px;
+}
+
+.order-select {
+  padding: 8px 12px;
+  border: 2px solid #dbd3d8;
+  border-radius: 6px;
+  background-color: #eff1f3;
+  font-size: 14px;
+  color: #223843;
+  min-width: 300px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.order-select:focus {
+  outline: none;
+  border-color: #d77a61;
+  box-shadow: 0 0 0 3px rgba(215, 122, 97, 0.1);
+}
+
+.order-select:hover {
+  border-color: #d77a61;
+}
+
+/* Vertical Layout Container */
+.tracking-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.tracking-left-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tracking-right-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Map Component Styles */
+.map-container {
+  width: 100%;
+  border: 2px solid #dbd3d8;
+  border-radius: 8px;
+  position: relative;
+  background-color: #eff1f3;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.map-title {
+  margin: 0;
+  padding: 15px 15px 10px 15px;
+  color: #223843;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #eff1f3;
+  border-bottom: 1px solid #dbd3d8;
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.map-wrapper {
+  flex: 1;
+  min-height: 300px;
+  position: relative;
+}
+
+.map-coordinates {
+  margin: 0;
+  padding: 10px 15px;
+  background-color: #eff1f3;
+  border-top: 1px solid #dbd3d8;
+  font-size: 12px;
+  color: #223843;
+  text-align: center;
+}
+
+/* Leaflet map specific styles */
+.leaflet-container {
+  height: 300px;
+  width: 100%;
+  border-radius: 0 0 6px 6px;
+}
+
+.map-popup {
+  text-align: center;
+  font-size: 14px;
+}
+
+.map-popup strong {
+  color: #223843;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.map-popup small {
+  color: #223843;
+  font-size: 11px;
+}
+
+.map-address {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.map-coordinates {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: #223843;
+}
+
+.map-loading {
+  text-align: center;
+}
+
+.map-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #dbd3d8;
+  border-top: 4px solid #d77a61;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Order Tracker Styles */
+.order-tracker {
+  padding: 20px;
+  background-color: #eff1f3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(34, 56, 67, 0.1);
+  margin-bottom: 0;
+  flex: 1;
+  border: 1px solid #dbd3d8;
+}
+
+.order-tracker-title {
+  margin: 0 0 20px 0;
+  color: #223843;
+}
+
+.order-info {
+  margin-bottom: 20px;
+}
+
+.order-number {
+  margin: 0 0 10px 0;
+  color: #223843;
+  font-size: 16px;
+}
+
+.order-estimated {
+  margin: 0 0 5px 0;
+  color: #223843;
+}
+
+.order-status {
+  margin: 0;
+  color: #223843;
+}
+
+.status-text {
+  font-weight: bold;
+}
+
+.status-completed {
+  color: #d8b4a0;
+}
+
+.status-current {
+  color: #d77a61;
+}
+
+.status-pending {
+  color: #dbd3d8;
+}
+
+.tracking-steps {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 20px;
+  overflow-x: auto;
+  gap: 0;
+}
+
+.tracking-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.tracking-step:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.step-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid white;
+  z-index: 2;
+  position: relative;
+}
+
+.step-indicator.completed {
+  background-color: #d8b4a0;
+  box-shadow: 0 0 0 2px #d8b4a0;
+}
+
+.step-indicator.current {
+  background-color: #d77a61;
+  box-shadow: 0 0 0 2px #d77a61;
+}
+
+.step-indicator.pending {
+  background-color: #dbd3d8;
+  box-shadow: 0 0 0 2px #dbd3d8;
+}
+
+.step-checkmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.step-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.step-content {
+  margin-top: 20px;
+  flex: 1;
+  width: 100%;
+}
+
+.step-title {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+.step-title.completed,
+.step-title.current {
+  color: #223843;
+}
+
+.step-title.pending {
+  color: #dbd3d8;
+}
+
+.step-description {
+  margin: 0;
+  font-size: 12px;
+}
+
+.step-description.completed,
+.step-description.current {
+  color: #223843;
+}
+
+.step-description.pending {
+  color: #dbd3d8;
+}
+
+.step-timestamp {
+  margin: 5px 0 0 0;
+  color: #223843;
+  font-size: 11px;
+}
+
+/* Order Items Styles */
+.order-items {
+  padding: 20px;
+  background-color: #eff1f3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(34, 56, 67, 0.1);
+  flex: 1;
+  height: fit-content;
+  border: 1px solid #dbd3d8;
+}
+
+.order-items-title {
+  margin: 0 0 20px 0;
+  color: #223843;
+}
+
+.items-list {
+  margin-bottom: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #dbd3d8;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #eff1f3;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.item-row:not(:last-child) {
+  border-bottom: 1px solid #dbd3d8;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.item-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #dbd3d8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.item-details h4 {
+  margin: 0 0 5px 0;
+  color: #223843;
+  font-size: 16px;
+}
+
+.item-quantity {
+  margin: 0;
+  color: #223843;
+  font-size: 14px;
+}
+
+.item-description {
+  margin: 5px 0 0 0;
+  color: #223843;
+  font-size: 12px;
+}
+
+.item-pricing {
+  text-align: right;
+}
+
+.item-total {
+  margin: 0;
+  color: #223843;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item-unit-price {
+  margin: 0;
+  color: #223843;
+  font-size: 12px;
+}
+
+.order-summary {
+  border-top: 2px solid #dbd3d8;
+  padding-top: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-label {
+  color: #223843;
+}
+
+.summary-value {
+  color: #223843;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #dbd3d8;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tracking-steps {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tracking-step {
+    flex-direction: row;
+    text-align: left;
+    min-width: auto;
+    margin-bottom: 20px;
+  }
+
+  .step-content {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .step-connector {
+    position: absolute;
+    left: 9px;
+    top: 20px;
+    width: 2px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tracking-container {
+    padding: 10px;
+  }
+
+  .tracking-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  .tracking-steps {
+    padding: 10px 0;
+  }
+}

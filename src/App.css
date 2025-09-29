@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+/* Global App Styles with Color Palette */
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eff1f3;
+  color: #223843;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Color Palette Variables for consistency */
+:root {
+  --primary-dark: #223843;
+  --background-light: #eff1f3;
+  --neutral-light: #dbd3d8;
+  --accent-warm: #d8b4a0;
+  --accent-orange: #d77a61;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Global button styles */
+button {
+  font-family: inherit;
 }
 
-.App-link {
-  color: #61dafb;
+/* Global link styles */
+a {
+  color: var(--accent-orange);
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  color: var(--accent-warm);
+  text-decoration: underline;
+}
+
+/* Global input styles */
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Global heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+/* Global paragraph styles */
+p {
+  color: var(--primary-dark);
+  margin: 0;
 }

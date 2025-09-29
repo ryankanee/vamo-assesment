@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Delivery from "./components/delivery/delivery";
+import Tracking from "./components/tracking/tracking";
 
 function App() {
+  const [enterNumber, setEnterNumber] = useState(false);
+  const [selectedOrderId, setSelectedOrderId] = useState("ORD-2024-001");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      {enterNumber ? (
+        <Tracking selectedOrderId={selectedOrderId} />
+      ) : (
+        <Delivery
+          enterNumber={enterNumber}
+          setEnterNumber={setEnterNumber}
+          setSelectedOrderId={setSelectedOrderId}
+        />
+      )}
+    </>
   );
 }
 

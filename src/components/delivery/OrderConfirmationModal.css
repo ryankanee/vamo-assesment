@@ -1,0 +1,235 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #eff1f3;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(34, 56, 67, 0.3);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+  border: 2px solid #dbd3d8;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #dbd3d8;
+  background: linear-gradient(135deg, #d77a61 0%, #d8b4a0 100%);
+  color: #eff1f3;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #eff1f3;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: rgba(239, 241, 243, 0.2);
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 24px;
+}
+
+.order-info {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #eff1f3;
+  border-radius: 8px;
+  border-left: 4px solid #d8b4a0;
+  border: 1px solid #dbd3d8;
+}
+
+.order-info h3 {
+  margin: 0 0 12px 0;
+  color: #223843;
+  font-size: 18px;
+}
+
+.order-info p {
+  margin: 8px 0;
+  color: #223843;
+  font-size: 14px;
+}
+
+.order-info strong {
+  color: #223843;
+  font-weight: 600;
+}
+
+/* Tracking Section */
+.tracking-section h3 {
+  margin: 0 0 12px 0;
+  color: #223843;
+  font-size: 18px;
+}
+
+.tracking-section p {
+  margin: 0 0 20px 0;
+  color: #223843;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Tracking Actions */
+.tracking-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.track-order-btn {
+  background: linear-gradient(135deg, #d77a61 0%, #d8b4a0 100%);
+  color: #eff1f3;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(215, 122, 97, 0.3);
+}
+
+.track-order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(215, 122, 97, 0.4);
+}
+
+.track-order-btn:active {
+  transform: translateY(0);
+}
+
+/* Link Section */
+.link-section {
+  border-top: 1px solid #dbd3d8;
+  padding-top: 16px;
+}
+
+.link-label {
+  margin: 0 0 8px 0;
+  color: #223843;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.link-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.link-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #dbd3d8;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #223843;
+  background-color: #eff1f3;
+  font-family: monospace;
+}
+
+.link-input:focus {
+  outline: none;
+  border-color: #d77a61;
+  box-shadow: 0 0 0 3px rgba(215, 122, 97, 0.1);
+}
+
+.copy-btn {
+  background-color: #223843;
+  color: #eff1f3;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background-color: #d77a61;
+}
+
+.copy-btn:active {
+  background-color: #d8b4a0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modal-content {
+    margin: 10px;
+    max-width: none;
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .link-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .copy-btn {
+    align-self: flex-start;
+  }
+}
